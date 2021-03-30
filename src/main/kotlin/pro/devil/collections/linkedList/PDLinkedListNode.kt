@@ -1,4 +1,4 @@
-package pro.devil.collections
+package pro.devil.collections.linkedList
 
 data class PDLinkedListNode<T>(var value: T, var next: PDLinkedListNode<T>? = null) {
     override fun toString(): String {
