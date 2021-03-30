@@ -1,27 +1,19 @@
+import pro.devil.collections.linkedList.*
 
-class Car {
-    var doors: Int = 0
-}
+fun main() {
+    val list = PDLinkedList<Int>()
+    val list2 = PDLinkedList<Int>()
 
-fun printCar(car: Car?) {
-    val isCoupe = car?.let {
-        (it.doors <= 2)
-    }
-    if (isCoupe == true) {
-        println("Coupes are awesome")
-    }
-}
+    list.append(1).append(2).append(3)
+    list2.append(1).append(2).append(3).append(4)
 
-fun printCar2(car: Car?) {
-    val isCoupe = car?.run {
-        (this.doors <= 2)
-    }
+    println(list.middleItem())
+    println(list2.middleItem())
 
-    if (isCoupe == true) {
-        println("Coupes are awesome")
-    }
-}
+    list.printReversed()
 
-fun main(args: Array<String>) {
-    println("Hello World!")
+    println(list)
+    println(list.reversedList())
+
+
 }
