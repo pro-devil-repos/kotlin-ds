@@ -11,7 +11,7 @@ import kotlin.test.assertNull
 import kotlin.test.assertTrue
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
-class PDStackTests {
+class StackTests {
     @Test
     fun create_stack_success_test() {
         assertDoesNotThrow {
