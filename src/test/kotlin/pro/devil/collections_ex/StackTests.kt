@@ -1,10 +1,10 @@
-package pro.devil.collections
+package pro.devil.collections_ex
 
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.TestInstance
 import org.junit.jupiter.api.assertDoesNotThrow
-import pro.devil.collections.stack.PDStack
-import pro.devil.collections.stack.stackOf
+import pro.devil.collections_ex.stack.PDStack
+import pro.devil.collections_ex.stack.stackOf
 import kotlin.test.assertEquals
 import kotlin.test.assertFalse
 import kotlin.test.assertNull

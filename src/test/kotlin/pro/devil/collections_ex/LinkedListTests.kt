@@ -1,8 +1,8 @@
-package pro.devil.collections
+package pro.devil.collections_ex
 
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.TestInstance
-import pro.devil.collections.linkedList.LinkedList
+import pro.devil.collections_ex.linkedList.LinkedList
 import kotlin.test.assertEquals
 import kotlin.test.assertFalse
 import kotlin.test.assertNull

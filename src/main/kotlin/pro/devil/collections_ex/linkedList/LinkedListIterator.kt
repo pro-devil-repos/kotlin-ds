@@ -1,4 +1,4 @@
-package pro.devil.collections.linkedList
+package pro.devil.collections_ex.linkedList
 
 import java.lang.IndexOutOfBoundsException
 

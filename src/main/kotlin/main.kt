@@ -1,4 +1,4 @@
-import pro.devil.collections.linkedList.*
+import pro.devil.collections_ex.linkedList.*
 
 fun main() {
     val list = LinkedList<Int>()

@@ -1,4 +1,4 @@
-package pro.devil.collections.stack
+package pro.devil.collections_ex.stack
 
 
 fun main() {

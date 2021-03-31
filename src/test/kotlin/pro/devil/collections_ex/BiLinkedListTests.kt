@@ -1,9 +1,9 @@
-package pro.devil.collections
+package pro.devil.collections_ex
 
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.TestInstance
 import org.junit.jupiter.api.assertDoesNotThrow
-import pro.devil.collections.linkedList.BiLinkedList
+import pro.devil.collections_ex.linkedList.BiLinkedList
 import kotlin.test.assertEquals
 import kotlin.test.assertNotNull
 import kotlin.test.assertNull
