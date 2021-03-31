@@ -2,9 +2,9 @@ package pro.devil.collections.linkedList
 
 import java.lang.IndexOutOfBoundsException
 
-class PDLinkedListIterator<T>(private val list: PDLinkedList<T>) : Iterator<T>, MutableIterator<T> {
+class LinkedListIterator<T>(private val list: LinkedList<T>) : Iterator<T>, MutableIterator<T> {
     private var index = 0
-    private var lastNode: PDLinkedListNode<T>? = null
+    private var lastNode: LinkedListNode<T>? = null
 
     override fun hasNext() = index < list.size
 

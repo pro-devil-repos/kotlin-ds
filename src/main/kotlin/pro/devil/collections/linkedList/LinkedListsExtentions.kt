@@ -1,6 +1,6 @@
 package pro.devil.collections.linkedList
 
-fun <T> PDLinkedListNode<T>.printReversed() {
+fun <T> LinkedListNode<T>.printReversed() {
     this.next?.printReversed()
 
     if (this.next != null) {
@@ -10,15 +10,15 @@ fun <T> PDLinkedListNode<T>.printReversed() {
     print(this.value.toString())
 }
 
-fun <T> PDLinkedList<T>.printReversed() {
+fun <T> LinkedList<T>.printReversed() {
     this.nodeAt(0)?.printReversed()
     println()
 }
 
 
-fun <T> PDLinkedList<T>.middleItem() = this.at(this.size / 2)
+fun <T> LinkedList<T>.middleItem() = this.at(this.size / 2)
 
-private fun <T> addInReverse(list: PDLinkedList<T>, node: PDLinkedListNode<T>) {
+private fun <T> addInReverse(list: LinkedList<T>, node: LinkedListNode<T>) {
     val next = node.next
 
     if (next != null) {
@@ -28,8 +28,8 @@ private fun <T> addInReverse(list: PDLinkedList<T>, node: PDLinkedListNode<T>) {
     list.append(node.value)
 }
 
-fun <T> PDLinkedList<T>.reversedList(): PDLinkedList<T> {
-    val result = PDLinkedList<T>()
+fun <T> LinkedList<T>.reversedList(): LinkedList<T> {
+    val result = LinkedList<T>()
     val head = nodeAt(0)
 
     if (head != null) {

@@ -2,25 +2,25 @@ package pro.devil.collections
 
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.TestInstance
-import pro.devil.collections.linkedList.PDLinkedList
+import pro.devil.collections.linkedList.LinkedList
 import kotlin.test.assertEquals
 import kotlin.test.assertFalse
 import kotlin.test.assertNull
 import kotlin.test.assertTrue
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
-class PDLinkedListTests {
+class LinkedListTests {
 
     @Test
     fun create_list_success() {
-        val list = PDLinkedList<Int>()
+        val list = LinkedList<Int>()
 
         assertTrue { list.isEmpty() }
     }
 
     @Test
     fun push_element_success() {
-        val list = PDLinkedList<Int>()
+        val list = LinkedList<Int>()
 
         list.push(3).push(2)
 
@@ -31,7 +31,7 @@ class PDLinkedListTests {
 
     @Test
     fun get_element_success() {
-        val list = PDLinkedList<Int>()
+        val list = LinkedList<Int>()
 
         list.push(3).push(2).push(1)
 
@@ -40,7 +40,7 @@ class PDLinkedListTests {
 
     @Test
     fun append_element_success() {
-        val list = PDLinkedList<Int>()
+        val list = LinkedList<Int>()
 
         list.append(3).append(2)
 
@@ -51,7 +51,7 @@ class PDLinkedListTests {
 
     @Test
     fun insert_element_success() {
-        val list = PDLinkedList<Int>()
+        val list = LinkedList<Int>()
 
         list.push(3).push(2).push(1)
         list.insert(4, 1)
@@ -62,7 +62,7 @@ class PDLinkedListTests {
 
     @Test
     fun pop_element_success() {
-        val list = PDLinkedList<Int>()
+        val list = LinkedList<Int>()
 
         list.push(3).push(2).push(1)
         assertEquals(list.size, 3)
@@ -81,7 +81,7 @@ class PDLinkedListTests {
 
     @Test
     fun removeLast_element_success() {
-        val list = PDLinkedList<Int>()
+        val list = LinkedList<Int>()
 
         list.push(3).push(2).push(1)
         assertEquals(list.size, 3)
@@ -100,7 +100,7 @@ class PDLinkedListTests {
 
     @Test
     fun removeAfter_element_success() {
-        val list = PDLinkedList<Int>()
+        val list = LinkedList<Int>()
 
         list.push(3).push(2).push(1)
         assertEquals(list.size, 3)
@@ -116,7 +116,7 @@ class PDLinkedListTests {
 
     @Test
     fun iterate_elements_success() {
-        val list = PDLinkedList<Int>()
+        val list = LinkedList<Int>()
 
         list.push(3).push(2).push(1)
         assertEquals(list.size, 3)
@@ -132,7 +132,7 @@ class PDLinkedListTests {
 
     @Test
     fun contains_element_success() {
-        val list = PDLinkedList<Int>()
+        val list = LinkedList<Int>()
 
         list.push(3).push(2).push(1)
 
@@ -142,7 +142,7 @@ class PDLinkedListTests {
 
     @Test
     fun containsAll_elements_success() {
-        val list = PDLinkedList<Int>()
+        val list = LinkedList<Int>()
         val listNeeded = listOf(1, 2)
         val listNeeded2 = listOf(1, 2, 5)
 
@@ -154,7 +154,7 @@ class PDLinkedListTests {
 
     @Test
     fun add_element_success() {
-        val list = PDLinkedList<Int>()
+        val list = LinkedList<Int>()
 
         list.push(3).push(2).push(1)
 
@@ -164,7 +164,7 @@ class PDLinkedListTests {
 
     @Test
     fun addAll_elements_success() {
-        val list = PDLinkedList<Int>()
+        val list = LinkedList<Int>()
 
         list.push(3).push(2).push(1)
 
@@ -174,7 +174,7 @@ class PDLinkedListTests {
 
     @Test
     fun clear_list_success() {
-        val list = PDLinkedList<Int>()
+        val list = LinkedList<Int>()
 
         list.push(3).push(2).push(1)
         list.clear()
@@ -183,7 +183,7 @@ class PDLinkedListTests {
 
     @Test
     fun remove_element_success() {
-        val list = PDLinkedList<Int>()
+        val list = LinkedList<Int>()
 
         list.push(3).push(2).push(3)
 
@@ -198,7 +198,7 @@ class PDLinkedListTests {
 
     @Test
     fun removeAll_elements_success() {
-        val list = PDLinkedList<Int>()
+        val list = LinkedList<Int>()
 
         list.push(3).push(2).push(3)
 
@@ -212,7 +212,7 @@ class PDLinkedListTests {
 
     @Test
     fun retainAll_elements_success() {
-        val list = PDLinkedList<Int>()
+        val list = LinkedList<Int>()
 
         list.addAll(listOf(3, 2, 3, 4, 5))
 

@@ -3,9 +3,9 @@ package pro.devil.collections.linkedList
 /**
  * Тестовая реализация связного списка
  */
-class PDLinkedList<T> : Iterable<T>, Collection<T>, MutableIterable<T>, MutableCollection<T> {
-    private var head: PDLinkedListNode<T>? = null
-    private var tail: PDLinkedListNode<T>? = null
+class LinkedList<T> : Iterable<T>, Collection<T>, MutableIterable<T>, MutableCollection<T> {
+    private var head: LinkedListNode<T>? = null
+    private var tail: LinkedListNode<T>? = null
     override var size: Int = 0
         private set
 
@@ -17,8 +17,8 @@ class PDLinkedList<T> : Iterable<T>, Collection<T>, MutableIterable<T>, MutableC
     /**
      * Добавление элемента в начало списка
      */
-    fun push(value: T): PDLinkedList<T> {
-        head = PDLinkedListNode(value = value, next = head)
+    fun push(value: T): LinkedList<T> {
+        head = LinkedListNode(value = value, next = head)
 
         if (tail == null) {
             tail = head
@@ -32,11 +32,11 @@ class PDLinkedList<T> : Iterable<T>, Collection<T>, MutableIterable<T>, MutableC
     /**
      * Добавление элемента в конец списка
      */
-    fun append(value: T): PDLinkedList<T> {
+    fun append(value: T): LinkedList<T> {
         if (isEmpty()) {
             push(value)
         } else {
-            tail?.next = PDLinkedListNode(value)
+            tail?.next = LinkedListNode(value)
             tail = tail?.next
 
             size++
@@ -48,13 +48,13 @@ class PDLinkedList<T> : Iterable<T>, Collection<T>, MutableIterable<T>, MutableC
     /**
      * Добавление элемента в середину списка
      */
-    fun insert(value: T, afterIndex: Int): PDLinkedList<T> {
+    fun insert(value: T, afterIndex: Int): LinkedList<T> {
         val afterNode = nodeAt(afterIndex)
 
         if (tail == afterNode) {
             append(value)
         } else if (afterNode != null) {
-            val newNode = PDLinkedListNode(value, afterNode.next)
+            val newNode = LinkedListNode(value, afterNode.next)
             afterNode.next = newNode
             size++
         }
@@ -131,7 +131,7 @@ class PDLinkedList<T> : Iterable<T>, Collection<T>, MutableIterable<T>, MutableC
         return result
     }
 
-    fun nodeAt(index: Int): PDLinkedListNode<T>? {
+    fun nodeAt(index: Int): LinkedListNode<T>? {
         var currentNode = head
         var currentIndex = 0
 
@@ -152,7 +152,7 @@ class PDLinkedList<T> : Iterable<T>, Collection<T>, MutableIterable<T>, MutableC
     }
 
     override fun iterator(): MutableIterator<T> {
-        return PDLinkedListIterator<T>(this)
+        return LinkedListIterator<T>(this)
     }
 
     /**
